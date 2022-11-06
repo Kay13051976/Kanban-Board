@@ -1,0 +1,85 @@
+:root {
+  --category-1: rgb(238, 238, 98);
+  --category-2: rgb(187, 248, 187);
+
+  --category-3: rgb(247, 110, 233);
+  --category-4: rgb(244, 78, 78);
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-image: url(https://cdn.pixabay.com/photo/2015/11/03/08/54/laptop-1019763_1280.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+  overflow: hidden;
+}
+h1 {
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px gray;
+}
+.main-title {
+  text-align: center;
+  font-size: 3rem;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.drag-container {
+  margin: 20px;
+}
+.drag-list {
+  display: flex;
+  align-items: flex-start;
+}
+.drag-column {
+  flex: 1;
+  margin: 0 10px;
+  position: relative;
+  background-color: rgb(157, 210, 249);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.header h1 {
+  font-size: 1.5rem;
+}
+.backlog-column .header {
+  background-color: var(--category-1);
+}
+.progress-column .header {
+  background-color: var(--category-2);
+}
+.complete-column .header {
+  background-color: var(--category-3);
+}
+.reject-column .header {
+  background-color: var(--category-4);
+}
+.custom-scroll {
+  overflow-y: auto;
+  max-height: 52vh;
+}
+
+.drag-item-list {
+  min-height: 50px;
+}
+.drag-item {
+  margin: 10px;
+  padding: 10px;
+  height: fit-content;
+  background-color: aliceblue;
+  border-radius: 10px;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
